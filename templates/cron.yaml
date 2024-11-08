@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  namespace: namespace
+  name: regression-tests
+spec:
+  schedule: "0 0,4,8,12,16,20 * * *"
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 30000
+      template:
+        spec:
+          imagePullSecrets:
+          - name: jfrogregistrykey
+          containers:
+          - name: tests
+            image: organization.jfrog.io/docker-dev/regression-tests:0.0.1
+            imagePullPolicy: Always
+          restartPolicy: Never
