@@ -5,14 +5,14 @@ import json
         
 
 
-def run_calc(site_id):
-    assert site_id != None and site_id != "", "Input Site id should not be null or empty"
+def run_calc(data_key):
+    assert data_key != None and data_key != "", "Input id should not be null or empty"
     
     with open('environment.json', 'r') as file:
         data = json.load(file)
         url = (data['host']).replace("env", data['env']) + data["calcPath"]
         
-    requestbody = {'siteId': site_id}
+    requestbody = {'id': data_key}
     
     with open('./tests/test_secrets.json', 'r') as file:
           secrets = json.load(file)
@@ -24,11 +24,11 @@ def run_calc(site_id):
 
 
 
-def get_sites():
+def get_data():
     with open('./tests/test_config.json', 'r') as file:
         data = json.load(file)
         return data["input6"]
 
-@pytest.mark.parametrize("site_id", get_sites())
-def test_run_calc(site_id):
-    run_calc(site_id)
+@pytest.mark.parametrize("data_key", get_data())
+def test_run_calc(data_key):
+    run_calc(data_key)

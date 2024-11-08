@@ -1,12 +1,12 @@
 import requests
 import json
      
-def not_found_validation(site_id):
+def not_found_validation(data_key):
     with open('environment.json', 'r') as file:
         data = json.load(file)
         data_url = (data['host']).replace("env", data['env']) + data["dataPath"]
         
-    url = data_url + site_id
+    url = data_url + data_key
     data_headers = {'Content-Type': 'application/json','Authorization': 'Bearer Bad-token'}
     response = requests.get(url, headers=data_headers)
     
@@ -18,7 +18,7 @@ def not_found_validation(site_id):
 def test_run_data_bad_token():
     not_found_validation("HOHOU00122A")
 
-def test_run_data_bad_token_fake_site():
+def test_run_data_bad_token_fake_data():
     not_found_validation("ABCDE")
 
 

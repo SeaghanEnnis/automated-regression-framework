@@ -1,0 +1,11 @@
+{
+
+    "input1": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+    "input2": ["abc", "def", "frt", "abs", "khk", "", "asda", "qwd"],
+    "input3": ["llp", "AAA", "BBB", "CCC", "DDD", "DEW"],
+    "input4": ["321", "12", "357", "866", "6"],
+    "input5":["service1","service2","service3","service4","serviceo","serviceZ"],
+    "input6": ["myinput"]
+
+
+}
