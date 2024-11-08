@@ -1,0 +1,7 @@
+output/
+*token*.txt
+*Token*.txt
+*pycache*
+docker-build.sh
+
+*secrets*.json

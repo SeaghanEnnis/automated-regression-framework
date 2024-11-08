@@ -1,0 +1,12 @@
+{
+    "env": "test",
+    "tokenFile":"./token.txt",
+    "tokenUrl":"https://<host>/api/v1/tokens",
+    "tokenPath":"/api/v1/tokens",
+    "ztpUrl": "https://<host>/enterprise/inventory/",
+    "ztpPath": "/enterprise/inventory/",
+    "host":"https://<host>",
+    "configPath":"/configserver",
+    "output": "regression-testing-",
+    "calcPath":"/calc/update"
+}
