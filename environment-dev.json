@@ -4,7 +4,7 @@
     "tokenUrl":"https://<host>/api/v1/tokens",
     "tokenPath":"/api/v1/tokens",
     "ztpUrl": "https://<host>/enterprise/inventory/",
-    "ztpPath": "/enterprise/inventory/",
+    "dataPath": "/enterprise/inventory/",
     "host":"https://<host>",
     "configPath":"/configserver",
     "output": "regression-testing-",
